@@ -5,11 +5,28 @@ body{
     background-color: crimson;
 }
 #navegacion{
-    background-color: aliceblue;
+    background-color: brown;
 }
 #contenido{
     background-color: greenyellow;
+    margin-left: 130px;
+    padding-left: 10px;
+    padding-top: 5px;
 }
 #pie{
     background-color: indigo;
+    clear: both;
+}
+li{
+    background-color: azure;
+    display: inline;
+    margin: 5px;
+}
+aside{
+    background-color: aquamarine;
+    float: left;
+    height:900px;
+}
+img{
+    width: 800px;
 }

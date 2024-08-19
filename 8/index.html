@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de CSS</title>
+    <style>
+        p[name="lementos"]{
+            color: red;
+        }
+        p[name^="e"]{
+            color: green;
+        }
+        p[name$="e"]{
+            color: blue;
+        }
+        p[name*="j"]{
+            color: pink;
+        }
+        p:nth-child(5){
+            color: brown;
+        }
+        p:first-child{
+            color: black;
+        }
+        #principal{
+            width: 500px;
+            /*background-color: aquamarine;*/
+            /* background: -webkit-linear-gradient(top, blue, cyan); */
+            background: -webkit-radial-gradient(center, ellipse, blue, cyan);
+            text-align: center;
+            margin: 15px auto;
+            font:bold 32px 'Mi fuente';
+            text-shadow: grey 3px 3px 5px;
+            text-decoration: red dotted;
+            padding: 15px;
+            border: 3px solid rgb(0, 0, 0);
+            border-radius: 15px;
+            box-shadow: lightgray 5px 5px 5px;
+            color: rgba(0, 0, 0, 0.7);
+            outline: 2px dashed pink;
+            outline-offset: 7px;
+            transform:scale(0.9) ;
+            /* transform: rotate(-10deg); */
+            /*transform: skew(30deg); /* perspectiva */ 
+            transition: transform 1s ease 0.1s;
+        }
+        #principal:hover{
+            transform: scale(1.2);
+        }
+        @font-face {
+            font-family: 'Mi fuente';
+            src: url('Lato-Black.ttf');
+        }
+    </style>
+</head>
+<body>
+    <header id="principal">
+        <span id="titulo">Estilos CSS3</span>
+    </header>
+    <p name="lementos">Prueba 1</p>
+    <p name="especial">Prueba 2</p>
+    <p name="tente">Prueba 3</p>
+    <p name==tejon>Prueba 4</p>
+    <p>Prueba 5</p>
+    <p>Prueba 6</p>
+    <p>Prueba 7</p>
+    <p>Prueba 8</p>
+</body>
+</html>
