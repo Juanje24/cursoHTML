@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var imagen;
+      function tipoflor(i) {
+        if (i == 0) {
+          alert("Pensamiento");
+        } else if (i == 1) {
+          alert("Orquídea");
+        } else if (i == 2) {
+          alert("Pico de pato");
+        } else {
+          alert("Lirio");
+        }
+      }
+
+      function manejaflor() {
+        imagen = document.getElementsByTagName("img");
+
+        // Asignar eventos a cada imagen
+        for (var i = 0; i < imagen.length; i++) {
+          (function (i) {
+            imagen[i].addEventListener("mouseover", function () {
+              crecer(imagen[i]);
+            });
+
+            imagen[i].addEventListener("mouseout", function () {
+              menguar(imagen[i]);
+            });
+
+            imagen[i].addEventListener("click", function () {
+              tipoflor(i);
+            });
+          })(i);
+
+          /*Es necesario porque, en JavaScript, sin un cierre,
+           las variables declaradas con var dentro de un bucle son 
+           compartidas por todas las iteraciones, y al momento de
+            que se ejecute un manejador de eventos o cualquier 
+            función que dependa de la variable, ya tendrá el valor 
+            final de i. Declarandola como let tiene alcance de bloque
+            y también lo solucionaría. */
+        }
+      }
+
+      function crecer(imagen) {
+        imagen.width = 400;
+        imagen.height = 400; // corregido a height en lugar de length
+      }
+
+      function menguar(imagen) {
+        imagen.width = 200;
+        imagen.height = 200; // corregido a height en lugar de length
+      }
+
+      window.onload = manejaflor;
+    </script>
+  </head>
+  <body>
+    <p>
+      <img src="../10/img/1.jpg" width="200" height="200" /> &nbsp;&nbsp;
+      <img src="../10/img/2.jpg" width="200" height="200" /> &nbsp;&nbsp;
+      <img src="../10/img/3.jpg" width="200" height="200" /> &nbsp;&nbsp;
+      <img src="../10/img/4.jpg" width="200" height="200" />
+    </p>
+  </body>
+</html>
