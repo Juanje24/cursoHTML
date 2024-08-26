@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        text-align: center;
+        background-color: beige;
+        width: 25%;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin: auto;
+      }
+      td {
+        padding: 10px;
+      }
+    </style>
+    <script>
+      var edad;
+      function comenzar() {
+        edad = document.getElementById("edad");
+        edad.addEventListener("change", actualizar, false);
+        document.datos.addEventListener("invalid", validar, true);
+        document
+          .getElementById("Enviar")
+          .addEventListener("click", enviar, false);
+        document.datos.addEventListener("input", validarTiempoReal, false);
+      }
+      function actualizar() {
+        var salida = document.getElementById("rango");
+        salida.innerHTML = edad.value;
+      }
+      function validar(e) {
+        var elemento = e.target;
+        elemento.style.background = "#FFDDDD";
+      }
+      function enviar() {
+        var cuadroUser = document.getElementById("usuario");
+        var correcto = document.datos.checkValidity();
+        if (correcto == true) {
+          document.datos.submit();
+        } else if (
+          cuadroUser.validity.valueMissing == true ||
+          cuadroUser.validity.patternMismatch == true
+        ) {
+          alert(
+            "El usuario no puede estar vacío y debe estar entre 1 y 10 letras"
+          );
+        }
+      }
+      function validarTiempoReal(e) {
+        var elemento = e.target;
+        if (elemento.validity.valid == true) {
+          elemento.style.background = "#FFFFFF";
+        } else {
+          elemento.style.background = "#FFDDDD";
+        }
+      }
+      window.addEventListener("load", comenzar, false);
+    </script>
+  </head>
+  <body>
+    <section>
+      <form name="datos" method="get">
+        <!-- <datalist id="informacion">
+          <option value="968126092" label="Tlf 1"></option>
+          <option value="968126012" label="Tlf 2"></option>
+          <option value="989122442" label="Tlf 3"></option>
+        </datalist>
+        Telefono: &nbsp;
+        <input type="tel" name="telefono" id="telefono" list="informacion" /> -->
+        <table>
+          <tr>
+            <td>Usuario:</td>
+            <td>
+              <input
+                pattern="[A-Za-z]{1,10}"
+                name="usuario"
+                id="usuario"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td><input type="email" name="miemail" id="miemail" required /></td>
+          </tr>
+          <tr>
+            <td>Edad:</td>
+            <td>
+              <input
+                type="range"
+                name="edad"
+                id="edad"
+                min="1"
+                max="100"
+                value="20"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><output id="rango">20</output></td>
+          </tr>
+          <tr>
+            <td><input type="submit" id="Enviar" value="Registrar" /></td>
+          </tr>
+        </table>
+      </form>
+    </section>
+  </body>
+</html>
