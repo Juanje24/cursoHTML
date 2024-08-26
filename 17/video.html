@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insercion de video</title>
+    <link rel="stylesheet" href="./estilos.css" />
+    <script src="./funcionalidadbarra.js"></script>
+  </head>
+  <body>
+    <h4>Ejemplo de insercion de un video en formato mp4</h4>
+    <section id="video">
+      <video
+        id="mivideo"
+        src="./VID_20180818_003429.mp4"
+        poster="./Finisterra.jpg"
+        width="800"
+        loop
+      ></video>
+      <nav>
+        <div id="botones">
+          <button type="button" id="reproducir">Play</button>
+        </div>
+        <div id="barra">
+          <div id="progreso"></div>
+        </div>
+        <div id="volumen">
+          <button type="button" id="volume">Volumen</button>
+        </div>
+      </nav>
+    </section>
+    <div id="barravol">
+      <div id="progresovol"></div>
+    </div>
+    <section id="audio">
+      <h4>Ejemplo de insercion de un audio en formato mp3</h4>
+      <audio src="Fiesta Pagana.mp3" controls></audio>
+    </section>
+  </body>
+</html>

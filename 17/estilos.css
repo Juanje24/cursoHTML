@@ -1,0 +1,66 @@
+h4 {
+  margin: 20px auto;
+  padding: 3px;
+  text-align: center;
+  font-size: 20px;
+  background-color: rgb(253, 255, 127);
+  width: 500px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+#video {
+  width: 800px;
+  margin: 20px auto 0px auto;
+  background: grey;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+nav {
+  margin: 10px 0;
+}
+#botones {
+  float: left;
+  width: 100px;
+  height: 20px;
+  margin-left: 20px;
+}
+#barra {
+  float: left;
+  position: absolute;
+  background: white;
+  width: 600px;
+  height: 16px;
+  border: 1px solid orange;
+  padding: 3px;
+  margin-left: 90px;
+}
+#progreso {
+  position: absolute;
+  width: 0px;
+  height: 16px;
+  background: rgba(0, 0, 150, 0.7);
+}
+#volumen {
+  margin-left: 720px;
+}
+#barravol {
+  float: left;
+  margin-top: 5px;
+  margin-left: 1280px;
+  width: 24px;
+  height: 200px;
+  border: 0px solid black;
+  padding: 3px;
+}
+#progresovol {
+  width: 24px;
+  height: 0px;
+  background: green;
+}
+#audio {
+  clear: left;
+  text-align: center;
+  margin: 20px auto;
+}
