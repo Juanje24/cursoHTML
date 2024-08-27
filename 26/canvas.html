@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #lienzo1 {
+        background-color: red;
+      }
+      canvas {
+        margin-top: 50px;
+      }
+      section {
+        width: 500px;
+        position: relative;
+        margin: auto;
+      }
+    </style>
+    <script>
+      function comenzar() {
+        var elemento = document.getElementById("lienzo1");
+        lienzo = elemento.getContext("2d");
+        lienzo.strokeStyle = "#000cd2";
+        lienzo.fillStyle = "#08c30d";
+        lienzo.globalALpha = "0.7";
+        lienzo.strokeRect(100, 100, 120, 120);
+        lienzo.fillRect(110, 110, 100, 100);
+        lienzo.clearRect(120, 120, 80, 80);
+
+        var elemento2 = document.getElementById("lienzo2");
+        lienzo2 = elemento2.getContext("2d");
+        var degradado = lienzo2.createLinearGradient(0, 150, 500, 150);
+        degradado.addColorStop(0, "#f80a0a");
+        degradado.addColorStop(1, "#09fe03");
+        lienzo2.fillStyle = degradado;
+        lienzo2.fillRect(0, 0, 500, 300);
+
+        var elemento3 = document.getElementById("lienzo3");
+        lienzo3 = elemento3.getContext("2d");
+        var degradado2 = lienzo3.createRadialGradient(250, 150, 50, 250, 150, 300);
+        degradado2.addColorStop(0, "#f80a0a");
+        degradado2.addColorStop(1, "#09fe03");
+        lienzo3.fillStyle = degradado2;
+        lienzo3.fillRect(0, 0, 500, 300);
+      }
+      window.addEventListener("load", comenzar, false);
+    </script>
+  </head>
+  <body>
+    <section id="dibujo">
+      <canvas id="lienzo1" width="500" height="300"></canvas>
+      <canvas id="lienzo2" width="500" height="300"></canvas>
+      <canvas id="lienzo3" width="500" height="300"></canvas>
+    </section>
+  </body>
+</html>
