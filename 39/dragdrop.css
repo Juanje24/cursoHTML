@@ -1,0 +1,13 @@
+#zonadestino {
+  float: left;
+  width: 500px;
+  height: 400px;
+  margin: 100px;
+  border: 1px solid green;
+}
+#cajaimagen {
+  float: left;
+  width: 300px;
+  margin: 30px;
+  border: 1px solid red;
+}
