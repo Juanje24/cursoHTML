@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="archivos2.js"></script>
+  </head>
+  <body>
+    <div id="contenedor">
+      <section id="zonaformulario">
+        <form name="formulario">
+          <p>
+            Nombre de archivo o directorio a crear:
+            <br />
+            <input type="text" name="entrada" id="entrada" class="cajaTexto" />
+          </p>
+          <p>
+            Nombre de archivo o directorio a borrar:
+            <br />
+            <input type="text" name="borrado" id="borrado" class="cajaTexto" />
+          </p>
+          <p>
+            Introduce el nombre del archivo a leer:
+            <br />
+            <input type="text" name="lectura" id="lectura" class="cajaTexto" />
+          </p>
+          <p>
+            Archivo a mover:
+            <br />
+            <input type="text" name="archivo" id="archivo" class="cajaTexto" />
+          </p>
+          <p>
+            Directorio destino:
+            <br />
+            <input type="text" name="directorio" id="directorio" class="cajaTexto" />
+          </p>
+          <p>
+            <input type="button" name="boton" id="boton" value="Crear" />
+            &nbsp;
+            <input type="button" name="botonDir" id="botonDir" value="Crear directorio" />
+            &nbsp;
+            <input type="button" value="Borrar" id="botonDel" />
+            &nbsp;
+            <input type="button" value="Volver" id="botonBack" />
+            &nbsp;
+            <input type="button" value="Mover" id="botonMove" />
+            &nbsp;
+            <input type="button" value="Leer" id="botonRead" />
+          </p>
+        </form>
+      </section>
+      <section id="data">
+        <section id="zonadatos">No hay información</section>
+        <section id="contFich"></section>
+      </section>
+    </div>
+    <footer>
+      Ruta:
+      <div id="ruta" nombre="ruta"></div>
+    </footer>
+  </body>
+</html>
